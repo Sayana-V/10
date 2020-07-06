@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <style>
+   img {float: right;}
+  </style>
+</head>
+	<body>
+	<img src="https://ostrov.ucoz.net/_fr/18/1280277.jpg" alt="Кроссворд">
+			<h3>Выражения:</h3>
+			<p>1. [А-Я].д</p>
+			<p>2. [Дд]ам?(бо|бф|бу|ба)</p>
+			<p>3. (С|З)..[саучпрон]?ч</p>
+			<p>4. \Dм(ба|м|ма|ы|бу)+р</p>
+			<p>5. [Щшщ]*(И(с|м|р|ы|н)|и|Ы)</p>
+			<p>6.(по горизонтали) А(р|к|ж).(ке+го?|ж)у</p>
+                        <p>6.(по вертикали) .{1}р{0}т{1}в{0}л{1}а{1}с{1}?</p>
+			<p>7. .[а-я](е|с)т</p>
+			<p>8. Ч+.{1}й</p>
+			<p>9. .{0,1}(а|д|е|н|с).[г-я]c</p>
+			<p>10. .{1}р{0}т{0}в{0}л{0}?(ко+.|о)</p>
+		<form>
+			<h3>Вопросы:</h3>
+			<p>1. Его делают пчёлы</p>
+			<p>2. Гидротехническое сооружение</p>
+			<p>3. Заместитель директора</p>
+			<p>4. Холодное складское строение</p>
+			<p>5. Разновидность заправочного супа</p>
+			<p>6.(по горизонтали) То же, что кешью</p>
+                        <p>6.(по вертикали) Плотная шёлковая или полушёлковая ткань</p>
+			<p>7. Приносит детей</p>
+			<p>8. Травяной напиток</p>
+			<p>9. Почтовый ...</p>
+			<p>10. Первая нота</p>
+			<h3>Введите ответы:</h3>
+			1	<input type="text"> 	
+                        2	<input type="text">	
+                        3	<input type="text">	
+                        4	<input type="text">	
+                        5	<input type="text">
+			<br><br>
+			6(по горизонтали) <input type="text">	
+                        6(по вертикали)	<input type="text">		
+                        7	<input type="text">		
+                        8	<input type="text">	
+                        9	<input type="text">		
+                       10	<input type="text">
+			<br><br>
+		</form>
+		<input type="button" value="Проверить" onclick=buttonclick()>
+	
+		<script>
+			let rightanswers =
+			[
+			"Мёд",
+			"Дамба",
+			"Завуч",
+			"Амбар",
+			"Щи",
+			"Акажу",
+                        "Атлас",
+			"Аист",
+			"Чай",
+			"Адрес",
+			"До",
+			];
+			
+			
+			function buttonclick() {
+				for (let i = 0; i < document.forms[0].length; i++  ) {
+				if ( JSON.stringify( document.forms[0].elements[i].value ) === JSON.stringify( rightanswers[i]) )
+				{ document.forms[0].elements[i].value = 'Верно' }
+	
+				else
+				{ document.forms[0].elements[i].value = 'Неверно' }
+			}
+			};
+			
+		</script>
+		
+	</body>
+
+</html>
